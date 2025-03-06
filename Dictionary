@@ -1,0 +1,33 @@
+#1. Create a Dictionary with at least 5 key value pairs of the Student ID and Name
+Friends = {67: "Sai",69: "Krupa", 27: "Vijju", 28: "Geetu", 17: "Teju"}
+print("Initial Dictionary:", Friends)
+
+#1.1. Adding the values in dictionary
+Friends[53] = "Vasu"  
+print("After Adding a New Friend:", Friends)
+
+#1.2. Updating the values in dictionary
+Friends[62] = "Nandi"  
+print("After Updating Friend 62:", Friends)
+
+#1.3. Accessing the value in dictionary
+print("Friends with ID 69:", Friends[69])
+
+#1.4. Create a nested loop dictionary
+nested_Friends = { 200: {"Name": "Sai", "Age": 20, "Fav Color":"Pink","Roll No":67},
+201: {"Name": "Krupa", "Age": 19,"Fav Color":"White","Roll No":69},
+    202: {"Name": "Vijju", "Age": 21, "Fav Color":"Black","Roll No":27}}
+print("Nested Dictionary:", nested_Friends)
+
+#1.5. Access the values of nested loop dictionary
+print("Friends 201 Details:", nested_Friends[201])
+print("Student 202 Name:", nested_Friends[202]["Name"])
+
+#1.6. Print the keys present in a particular dictionary
+print("Keys in Dictionary:", Friends.keys())
+
+#1.7. Delete a value from a dictionary
+del Friends[53]
+print("After Deleting Friend 53:", Friends)
+
+
