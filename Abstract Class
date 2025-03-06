@@ -1,0 +1,59 @@
+#1. Create an abstract class with abstract and non-abstract methods.
+from abc import ABC, abstractmethod
+class AbstractBase(ABC):
+    @abstractmethod
+    def abstract_method(self):
+        pass
+    def non_abstract_method(self):
+        print("This is a non-abstract method")
+
+#2. Create a sub class for an abstract class. Create an object in the child class for the abstract class and access the non-abstract methods 
+from abc import ABC, abstractmethod
+class AbstractBase(ABC):
+    @abstractmethod
+    def abstract_method(self):
+        pass
+    def non_abstract_method(self):
+        print("This is a non-abstract method")
+class Child(AbstractBase):
+    def abstract_method(self):
+        print("Abstract method implemented in Child class")
+    def access_non_abstract(self):
+        obj = AbstractBase.__subclasses__()[0]()
+        obj.non_abstract_method()  
+child = Child()
+child.access_non_abstract()
+
+#3. Create an instance for the child class in child class and call abstract methods
+from abc import ABC, abstractmethod
+class AbstractBase(ABC):
+    @abstractmethod
+    def abstract_method(self):
+        pass
+    def non_abstract_method(self):
+        print("This is a non-abstract method")
+class Child(AbstractBase):
+    def abstract_method(self):
+        print("Abstract method implemented in Child class")
+    def call_abstract_method(self):
+        child_instance = Child()  
+        child_instance.abstract_method()
+child = Child()
+child.call_abstract_method()
+
+#4. Create an instance for the child class in child class and call non-abstract methods
+from abc import ABC, abstractmethod
+class AbstractBase(ABC):
+    @abstractmethod
+    def abstract_method(self):
+        pass
+    def non_abstract_method(self):
+        print("This is a non-abstract method")
+class Child(AbstractBase):
+    def abstract_method(self):
+        print("Abstract method implemented in Child class")
+    def call_non_abstract_method(self):
+        child_instance = Child()  
+        child_instance.non_abstract_method()  
+child = Child()
+child.call_non_abstract_method()
