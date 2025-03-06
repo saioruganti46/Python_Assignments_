@@ -1,0 +1,93 @@
+#1. Write a program to generate Arithmetic Exception without exception handling
+a = 49
+b = 0
+result = a / b  
+print(result)
+
+#2. Handle the Arithmetic exception using try-catch block
+try:
+    a = 34
+    b = 0
+    result = a / b  
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+#3. Write a Method That Throws an Exception and Call It Without Try Block
+def divide(a, b):
+    if b == 0:
+        raise ZeroDivisionError("You cannot divide by zero")
+    return a / b
+print(divide(23, 0))  
+
+#4. Write a program with multiple catch blocks
+try:
+    n = int(input(" "))
+    result = 10 / n
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+except ValueError:
+    print("Invalid input Please enter a valid number")
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+
+#5. Write a program to Throw an Exception with a Custom Message
+def check_age(age):
+    if age < 18:
+        raise ValueError("Age must be 18 or above")
+    print("You are allowed")
+check_age(9)
+
+#6. Write a program to create your own exception
+class MyOwnException(Exception):
+    pass  
+def check_number(n):
+    if n < 0:
+        raise MyOwnException("Negative numbers are not allowed")
+try:
+    check_number(-12)
+except MyOwnException as e:
+    print(f"Own Exception Caught: {e}")
+
+#7. Write a program with a finally block
+try:
+    print("Opening file")
+    file = open("exam.txt", "r")
+except FileNotFoundError:
+    print("File not found")
+finally:
+    print("Executing the finally block, closing resources")
+
+#8.Write a program to Generate Arithmetic Exception
+s=34
+t=0
+r=s/t
+print(r)
+
+#9.Write a program to generate FileNotFoundException
+try:
+    file = open("read.txt", "r")
+except FileNotFoundError:
+    print("The file was not found")
+
+#10. Write a program to generate ClassNotFoundException
+try:
+    import sample_module 
+except ModuleNotFoundError:
+    print("Module not found")
+
+# 11. Write a program to generate iOException
+try:
+    with open("hello.txt", "r") as file:
+        data = file.read()
+except IOError:
+    print("An iOError occurred")
+
+#12. Write a program to generate NoSuchFieldException
+class MyClass:
+    def __init__(self):
+        self.name = "Durga"
+obj = MyClass()
+try:
+    print(obj.age)  
+except AttributeError:
+    print("Attribute does not exist")
