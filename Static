@@ -1,0 +1,30 @@
+#1. Define a static variable and access that through a class
+class MyClass:
+    static_var = 47  
+print(MyClass.static_var)
+
+#2. Define a static variable and access that through a instance
+class MyClass:
+    static_var = 78
+obj = MyClass()
+print(obj.static_var)
+
+#3. Define a static variable and change within the instance
+class MyClass:
+    static_var = 39
+obj1 = MyClass()
+obj2 = MyClass()
+obj1.static_var = 21 
+print(MyClass.static_var)  
+print(obj1.static_var)     
+print(obj2.static_var)
+
+#4. Define a static variable and change within the class
+class MyClass:
+    static_var = 89 
+MyClass.static_var = 64
+obj1 = MyClass()
+obj2 = MyClass()
+print(MyClass.static_var)  
+print(obj1.static_var)     
+print(obj2.static_var)     
