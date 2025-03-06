@@ -1,0 +1,52 @@
+""""1. Write a class with a default constructor, one argument constructor and two argument
+constructors. Instantiate the class to call all the constructors of that class from a main
+class"""
+class Example:
+    def __init__(self, arg1=None, arg2=None):
+        if arg1 is None  and arg2 is None :
+            print("Default Constructor Called")
+        elif arg2 is None:
+            print("One Argument Constructor Called: {arg1}")
+        else:
+            print("Two Arguments Constructor Called: {arg1}, {arg2}")
+obj1 = Example()             
+obj2 = Example(15)           
+obj3 = Example(45, 65)
+
+"""2. Call the constructors(both default and argument constructors) of super class from a child
+class"""
+class Parent:
+    def __init__(self, arg=None):
+        if arg is None:
+            print("Parent Default Constructor")
+        else:
+            print(f"Parent Constructor with argument: {arg}")
+class Child(Parent):
+    def __init__(self):
+        super().__init__()  
+        print("Child Default Constructor")
+obj1 = Child()          
+obj2 = Parent(134)
+
+#3. Apply private, public, protected and default access modifiers to the constructor.
+class Example:
+    def __init__(self):
+        print("Public Constructor")
+    def _protected_constructor(self):
+        print("Protected Constructor")
+    def __private_constructor(self):
+        print("Private Constructor")
+obj = Example()  
+obj._protected_constructor()
+obj._Example__private_constructor()
+
+#4.Write a program which illustrates the concept of attributes of a constructor.
+class Person:
+    def __init__(self, name, age,height):
+        self.name = name  
+        self.age = age    
+        self.height = height
+    def display(self):
+        print(f"Name: {self.name}, Age: {self.age}, Height:{self.height}")
+person1 = Person("Sai", 20,5.9)
+person1.display()
