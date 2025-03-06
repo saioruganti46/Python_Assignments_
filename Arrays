@@ -1,0 +1,97 @@
+#1. Write a function to add integer values of an array
+arr = [1,2,3,4,5,6,7,8,9]
+total=sum(arr)
+print(total)
+
+#2. Write a function to calculate the average value of an array of integers
+arr = [10,20,30,40,50]
+avg = sum(arr)/len(arr) if arr else 0
+print(avg)
+
+#3. Write a program to find the index of an array element
+arr=[12,34,56,47,52,45,67,34]
+value = 52
+index = arr.index(value)
+print(index)
+
+#4. Write a function to test if array contains a specific value
+arr=[34,53,45,12,67,89]
+value = 67
+print(value in arr)
+
+#5. Write a function to remove a specific element from an array
+arr=[2,45,67,23,90,80,23,45]
+value = 45
+arr =[x for x in arr if x!=value]
+print(arr)
+
+#6. Write a function to copy an array to another array
+arr=[3,4,5,2,1,7,8,9]
+copy_arr= arr[:]
+print(copy_arr)
+
+#7. Write a function to insert an element at a specific position in the array
+arr =[23,12,56,78,90,34,51]
+index,value=5,100
+arr.insert(index,value)
+print(arr)
+
+#8. Write a function to find the minimum and maximum value of an array
+arr=[3,12,45,67,89,1]
+print(max(arr),min(arr))
+
+#9. Write a function to reverse an array of integer values
+arr=[5,56,78,12,34,66,98]
+arr = arr[::-1]
+print(arr)
+
+#10. Write a function to find the duplicate values of an array
+arr = [1,2,4,5,6,7,2,4,5]
+dup=list(set([x for x in arr if arr.count(x) > 1]))
+print(dup)         
+
+#11. Write a program to find the common values between two arrays
+arr_1=[23,45,67,89,90,12]
+arr_2=[90,34,89,25,10,23]
+common = list(set(arr_1) & set(arr_2))
+print(common)
+
+#12. Write a method to remove duplicate elements from an array
+arr=[23,21,67,45,21,67,89,90]
+arr=list(set(arr))
+print(arr)
+
+#13. Write a method to find the second largest number in an array
+arr=[30,10,38,90,23,45,67]
+arr=sorted(set(arr))
+print(arr[-2])
+
+#14. Write a method to find the second largest number in an array
+arr=[80,60,88,70,23,45,67]
+arr=sorted(set(arr))
+print(arr[-2])
+
+#15. Write a method to find number of even number and odd numbers in an array
+arr=[23,42,45,68,90,12]
+even_count=sum(1 for x in arr if x % 2 == 0)
+odd_count=len(arr) - even_count
+print(even_count)
+print(odd_count)
+
+#16. Write a function to get the difference of largest and smallest value
+arr=[23,45,89,70,65,12]
+diff = max(arr)-min(arr)
+print(diff)
+
+#17. Write a method to verify if the array contains two specified elements(12,23)
+arr=[45,23,12,56,78,90,35]
+for i in arr:
+    if i == 12:
+        print("12 is present")
+    if i == 23:
+        print("23 is present")
+
+#18. Write a program to remove the duplicate elements and return the new array
+arr=[12,32,41,53,64,75,89,12,32,41]
+arr=list(set(arr))
+print(arr)
