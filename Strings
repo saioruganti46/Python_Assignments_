@@ -1,0 +1,69 @@
+#1. Different ways creating a string
+str1 = 'Durga'
+str2 = "Sai"
+str3='''Oruganti'''
+print(str1, str2, str3)
+
+#2. Concatenating two strings using + operator
+str1 = "Hi"
+str2 = "Everyone"
+result=str1  + " " + str2
+print(result)
+
+#3. Finding the length of the string
+Str = "Durga Sai Oruganti"
+length = len(Str)
+print(length)
+
+#4. Extract a string using Substring
+sub_string = Str[0:6]
+print(sub_string)
+
+#5. Searching in strings using index()
+position = Str.index("Sai")
+print(position)
+
+#6. Matching a String Against a Regular Expression With matches()
+text_1 = "Durga Ganga Sai Lakshmi"
+if "Sai" in text_1:
+    print("match found")
+else:
+    print("match not found")
+    
+#7. Comparing strings
+str_1 = "Durga"
+str_2 = "sai"
+print(str_1 == str_2) 
+print(str_1 < str_2)  
+print(str_1 > str_2)
+
+#8. startsWith(), endsWith() and compareTo()
+str4="Durga Sai Lakshmi Oruganti"
+print(str4.startswith("Durga"))
+print(str4.endswith("Ganga"))
+print(str_1==str_2)
+
+#9. Trimming strings with strip()
+str5="  Aditya Degree College"
+trimmed_text = str5.strip()
+print(trimmed_text)
+
+#10. Replacing characters in strings with replace()
+str_3 = "Durga Sai"
+str_4 = str_3.replace("Sai","Lakshmi")
+print(str_4)
+
+#11. Splitting strings with split()
+flower = "rose,lilly,jasmine"
+words = flower.split()  
+print(words)
+
+#12. Converting integer objects to Strings
+n = 479
+str_n = str(n)
+print(str_n,type(str_n))
+
+#13. Converting to uppercase and lowercase
+txt = "Hi All"
+print(txt.upper())
+print(txt.lower())
